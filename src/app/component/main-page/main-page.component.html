@@ -1,0 +1,31 @@
+<div id="page-top" class="body">
+    <app-header></app-header>
+    <app-service></app-service>
+
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Portfolio</h2>
+                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+            <button type="button"  class="btn btn-primary" (mouseup)="filterProject(showAllBtn.name)" #showAllBtn>showall</button>
+            <button type="button" name="angular" class="btn btn-primary" (mouseup)="filterProject(angularBtn.name)" #angularBtn >Angular</button>
+            <button type="button" class="btn btn-primary" (mouseup)="filterProject(reactBtn.name)" name="react" #reactBtn>React</button>
+            <button type="button" class="btn btn-primary" (mouseup)="filterProject(vueBtn.name)"#vueBtn name="vue">Vue</button>
+
+
+            <!--  -->
+    <app-prtofolio *ngFor="let product of filterdProjects" [myproduct]="product"></app-prtofolio>
+            
+            <!-- ------********----------****** -->
+        </div>
+        
+    </section>
+    
+
+
+    <app-about></app-about>
+    <app-our-team></app-our-team>
+    
+
+</div>
