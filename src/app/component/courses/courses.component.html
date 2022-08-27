@@ -1,0 +1,48 @@
+<header class=" masthead course">
+    <div class="container">
+        <div class="masthead-subheading"> Welcome To our courses</div>
+        <div class="masthead-heading text-uppercase">What to learn next</div>
+        <a class="btn btn-primary btn-xl text-uppercase" >Tell Me More</a>
+    </div>
+</header>
+
+<section *ngIf="this.componenetShow===0" class="page-section bg-light" id="portfolio">
+<button type="button"  class="btn btn-primary" (mouseup)="showcomponent()" #showAllBtn>gotocart</button>
+
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">courses</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <!-- <button type="button"  class="btn btn-primary" (mouseup)="filtercourse('')" >showCourses</button>
+        <button type="button" name="angular" class="btn btn-primary" (mouseup)="filtercourse('angular')" #angularBtn >Angular</button>
+        <button type="button" class="btn btn-primary" (mouseup)="filtercourse('react')" >React</button>
+        <button type="button" class="btn btn-primary" (mouseup)="filtercourse('vue')">Vue</button> -->
+<app-market *ngFor="let course of coures$ |async" [mycourse]="course" ></app-market>
+
+
+    </div>
+    
+</section>
+
+
+<section *ngIf="this.componenetShow===1" class="page-section bg-light" id="portfolio">
+    <button type="button"  class="btn btn-primary" (mouseup)="showcomponent()" #showAllBtn>gotocourses</button>
+    
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Shopping Cart</h2>
+                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+            
+            <app-cart ></app-cart>
+    
+    
+        </div>
+        
+    </section>
+    <!-- <div *ngFor="let x of coures$ |async">
+        <h1>{{x.courseTitle}}</h1>
+
+
+    </div> -->

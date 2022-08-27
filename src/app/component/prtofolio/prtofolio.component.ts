@@ -12,11 +12,9 @@ export class PrtofolioComponent implements OnInit {
   faPlus = faPlus;
 
   @Input() myproduct!:Product
+  @Input() updateProduct:any
+
   
-
-
-  
-
   constructor() { }
 
   ngOnInit(): void {

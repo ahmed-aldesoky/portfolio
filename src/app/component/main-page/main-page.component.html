@@ -15,12 +15,50 @@
 
 
             <!--  -->
-    <app-prtofolio *ngFor="let product of filterdProjects" [myproduct]="product"></app-prtofolio>
+    <app-prtofolio *ngFor="let product of filterdProjects" [myproduct]="product" [updateProduct]="updatePopProduct.bind(this)"></app-prtofolio>
             
             <!-- ------********----------****** -->
         </div>
+ 
         
     </section>
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">{{popProduct.projectName}}</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src={{popProduct.projectimg}} alt="..." />
+                                <p>{{popProduct.description}}</p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>price:</strong>
+                                        {{popProduct.price}}
+                                    </li>
+                                    <li>
+                                        <strong>Category:</strong>
+                                        {{popProduct.category}}
+                                    </li>
+                                    <li>
+                                        <strong>availability:</strong>
+                                        {{popProduct.availability}}
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
 
@@ -29,3 +67,4 @@
     
 
 </div>
+
