@@ -1,11 +1,11 @@
-<div class="row">
-    <div class="col-4">
-        <div class="portfolio-item m-1">
-            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1" (mousedown)="updateProduct(myproduct)" >
+<div >
+    <div class="col">
+        <div class="portfolio-item m-1 p-3">
+            <a class="portfolio-link" data-bs-toggle="modal" (mousedown)="updateProduct(myproduct)" >
                 <div class="portfolio-hover">
                     <div class="portfolio-hover-content"><i class="fas fa-3x"><fa-icon [icon]="faPlus"></fa-icon></i></div>
                 </div>
-                <img class="img-fluid" id="projectimg" src={{myproduct.projectimg}} alt="..." />
+                <img class="img-fluid" id="projectimg" src={{myproduct.projectimg}} alt="..."   style="width: 316px; height: 230px;"/>
             </a>
             <div class="portfolio-caption">
                 <div class="portfolio-caption-heading" id="projectName">{{myproduct.projectName}}</div>

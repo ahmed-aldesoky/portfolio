@@ -13,7 +13,7 @@ import { Store } from '@ngrx/store';
 export class MainPageComponent implements OnInit {
 
   products:Product[]=[]
-  filterdProjects:Product[]=this.products
+  filterdProjects!:Product[]
   _filterText:string=""
   ProductObj!:Observable<Product>
   popProduct!:Product
@@ -42,7 +42,7 @@ export class MainPageComponent implements OnInit {
 
 
 
-    this.productService.getProducts()
+  this.productService.getProducts()
       .subscribe((products)=>(this.products=products.data.map(product=>({
         id:product.id,
         description:product.attributes.description,
@@ -53,6 +53,9 @@ export class MainPageComponent implements OnInit {
         projectimg:product.attributes.projectimg,
             })))
     )
+
+    
+    
   }
 // **********----------filtering projects---------********----
   filterProject(value:string){

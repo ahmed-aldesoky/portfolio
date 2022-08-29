@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { course } from 'src/app/data/models/courses';
 
 
 @Component({
@@ -8,8 +7,7 @@ import { course } from 'src/app/data/models/courses';
   styleUrls: ['./market.component.css']
 })
 export class MarketComponent implements OnInit {
-  data:course[]=[]
-  @Input() mycourse!:course
+ 
 
 
   constructor() { }

@@ -7,6 +7,9 @@ import { ServiceComponent } from './component/service/service.component';
 import { MainPageComponent } from './component/main-page/main-page.component';
 import { CoursesComponent } from './component/courses/courses.component';
 import { BlogComponent } from './component/blog/blog.component';
+import { ArticlesDetailsComponent} from './component/articles-details/articles-details.component';
+import { CartComponent } from './component/cart/cart.component';
+
 
 
 
@@ -27,6 +30,10 @@ const routes: Routes = [
    {path:'home', component:MainPageComponent},
    {path:'courses', component:CoursesComponent},
    {path:'blog', component:BlogComponent},
+   {path:'blog/:id', component:ArticlesDetailsComponent},
+   {path:'cart', component:CartComponent},
+
+
 
 
 

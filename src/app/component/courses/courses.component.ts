@@ -55,10 +55,6 @@ export class CoursesComponent implements OnInit {
   //         return course.category.toLowerCase() === filterTerm.toLowerCase();
   //     })}}
 
-      showcomponent(){
-        this.componenetShow===0? this.componenetShow=1 :this.componenetShow=0;
-        console.log(this.componenetShow);
-        
-      }
+   
 
 }

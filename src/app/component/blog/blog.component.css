@@ -29,3 +29,11 @@ flex-direction:row;
     align-items: center;
     
   }
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('http://localhost:1337/uploads/3_814e4d686d.jpg');
+    background-size: cover;
+  }

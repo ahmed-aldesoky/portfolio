@@ -11421,6 +11421,20 @@ header.course{
   background-size: cover;
 
 }
+header.cart{
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../src/assets/img/box-market-electronic-ordering-shop-basket.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+
+}
+
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;

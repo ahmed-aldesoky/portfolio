@@ -8,18 +8,18 @@
                 <h2 class="section-heading text-uppercase">Portfolio</h2>
                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
             </div>
-            <button type="button"  class="btn btn-primary" (mouseup)="filterProject(showAllBtn.name)" #showAllBtn>showall</button>
-            <button type="button" name="angular" class="btn btn-primary" (mouseup)="filterProject(angularBtn.name)" #angularBtn >Angular</button>
-            <button type="button" class="btn btn-primary" (mouseup)="filterProject(reactBtn.name)" name="react" #reactBtn>React</button>
-            <button type="button" class="btn btn-primary" (mouseup)="filterProject(vueBtn.name)"#vueBtn name="vue">Vue</button>
-
+            <button type="button"  class="btn btn-primary" (mouseup)="filterProject('')" #showAllBtn>showall</button>
+            <button type="button"  class="btn btn-primary" (mouseup)="filterProject('angular')"  >Angular</button>
+            <button type="button" class="btn btn-primary" (mouseup)="filterProject('react')">React</button>
+            <button type="button" class="btn btn-primary" (mouseup)="filterProject('vue')">Vue</button>
+<div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 g-2 g-lg-3">
 
             <!--  -->
-    <app-prtofolio *ngFor="let product of filterdProjects" [myproduct]="product" [updateProduct]="updatePopProduct.bind(this)"></app-prtofolio>
+    <app-prtofolio class="col" *ngFor="let product of filterdProjects" [myproduct]="product" [updateProduct]="updatePopProduct.bind(this)"></app-prtofolio>
             
             <!-- ------********----------****** -->
         </div>
- 
+    </div>
         
     </section>
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
