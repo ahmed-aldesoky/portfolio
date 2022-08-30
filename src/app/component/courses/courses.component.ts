@@ -23,7 +23,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
     this.store.dispatch(invokingCoursesApi())
 
-    
+  
 
   //   this.courseService.getCourses()
   //   .subscribe((courses)=>(this.courses=courses.data.map(course=>({
@@ -38,7 +38,9 @@ export class CoursesComponent implements OnInit {
   //         })))
   // )
   }
-
+  addToCart(product: course) {
+    this.courseService.addToCart(product);
+  }
   // **********----------filtering courses---------********----
   // filtercourse(value:string){
   //   console.log(this.coures$.subscribe);

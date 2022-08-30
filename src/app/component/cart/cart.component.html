@@ -1,33 +1,42 @@
 <header class=" masthead cart">
   <div class="container text-warning">
-      <div class="masthead-subheading "> Welcome To our courses</div>
-      <div class="masthead-heading text-uppercase">What to learn next</div>
+      <div class="masthead-subheading "> Welcome To Your cart</div>
+      <div class="masthead-heading text-uppercase">Do it now</div>
       <a class="btn btn-primary btn-xl text-uppercase" >Tell Me More</a>
   </div>
 </header>
 <section class="page-section bg-light" id="portfolio">
   
-      <div class="container">
+      <div class="container" style=" width:100%; ">
           <div class="text-center">
               <h2 class="section-heading text-uppercase">Shopping Cart</h2>
               <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
           </div>
-          
+          <button type="button" class="btn btn-danger" (click)="clear()">clear cart</button>
           <div class="row">
-            <div class="col-12">
-                <div class="card mb-3" style="max-width: 540px;">
+          <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 g-2 g-lg-3">
+            <div class="col" *ngFor="let product of cartProducts">
+                <div  class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="../../../assets/img/portfolio/1.jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="{{product.courseImg}}" class="img-fluid rounded-start" alt="..." style=" height: 250px; " >
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting t.</p>
-                          <div class="col">
+                          <h5 class="card-title">{{product.courseTitle}}</h5>
+                          <p class="card-text">{{product.creator}}</p>
+
+                          <div class="  row  align-self-end justify-content-end">
+                          <h2 class="card-title pricing-card-title col-6">{{product.price}}$</h2>
+
+                            <i  type="button" class="bi bi-trash col-2" style=" color: rgb(255, 0, 0);" (click)="removeCartProduct(product)"></i>
+
+                            <div class="col-3">
                             <i type="button" class='bi bi-plus-square-fill col-1'></i>
                             <p class="col-1">5</p>
-                            <i type="button" class='bi bi-dash-square-fill'></i>
+                            <i type="button" class='bi bi-dash-square-fill col-1'></i>
+                            
+                          </div>
                           </div>
                           
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -38,23 +47,9 @@
             </div>
             
         </div>
-        
+      </div>
   
   
       </div>
       
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

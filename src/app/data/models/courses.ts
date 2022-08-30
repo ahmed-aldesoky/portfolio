@@ -20,7 +20,4 @@ export interface CourseResponse{
     category:string,
     courseImg:string,
     publishDate:string
-
-
-
 }
