@@ -29,6 +29,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { courseReducer } from './store/reducers/courses.reducer';
 import { coursesEffects } from './store/effects/courses.effects';
+import { ToastComponent } from './component/toast/toast.component';
+import { MessageComponent } from './component/message/message.component';
+import { TitleComponent } from './component/title/title.component';
 
 
 
@@ -49,6 +52,9 @@ import { coursesEffects } from './store/effects/courses.effects';
     BlogComponent,
     ArticlesComponent,
     ArticlesDetailsComponent,
+    ToastComponent,
+    MessageComponent,
+    TitleComponent,
 
   ],
   imports: [
