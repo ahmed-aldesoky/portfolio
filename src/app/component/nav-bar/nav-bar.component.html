@@ -23,9 +23,9 @@
                 *ngIf="isLoggedIn" placement="left"  routerLink="/">
                 <h3 class="avatar-text">{{avatarInitial | uppercase}}</h3>
             </div>
-            <button routerLink="/auth/signup" type="button" class="m-1 btn app-bg-grey btn-sm" *ngIf="!isLoggedIn">Sign
+            <button routerLink="/signup" type="button" class="m-1 btn app-bg-grey btn-sm" *ngIf="!isLoggedIn">Sign
                 Up</button>
-            <button routerLink="/auth/login" type="button" class="m-1 btn app-bg-grey btn-sm"
+            <button routerLink="/login" type="button" class="m-1 btn app-bg-grey btn-sm"
                 *ngIf="!isLoggedIn">Login</button>
             <button (click)="logout()" type="button" class="m-1 btn app-bg-grey btn-sm" *ngIf="isLoggedIn">Logout</button>
         </div>

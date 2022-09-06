@@ -21,11 +21,11 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient, private ss: StorageService) { }
 
-  login(identifier: string, password: string) {
+  login(identifier: any, password: any) {
     return this.http.post<AuthResponse>(this.url, { identifier, password });
   }
 
-  register(username: string, email: string, password: string) {
+  register(username: any, email: any, password: any) {
     return this.http.post<AuthResponse>(`${this.url}/register`, { username, email, password });
   }
 

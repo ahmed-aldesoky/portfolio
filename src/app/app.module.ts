@@ -32,6 +32,11 @@ import { coursesEffects } from './store/effects/courses.effects';
 import { ToastComponent } from './component/toast/toast.component';
 import { MessageComponent } from './component/message/message.component';
 import { TitleComponent } from './component/title/title.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { loginComponent } from './component/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -55,6 +60,8 @@ import { TitleComponent } from './component/title/title.component';
     ToastComponent,
     MessageComponent,
     TitleComponent,
+    SignupComponent,
+    loginComponent,
 
   ],
   imports: [
@@ -68,7 +75,10 @@ import { TitleComponent } from './component/title/title.component';
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     StoreModule.forFeature("mycourses",courseReducer),
-    EffectsModule.forFeature([coursesEffects])
+    EffectsModule.forFeature([coursesEffects]),
+    ReactiveFormsModule,
+    // NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

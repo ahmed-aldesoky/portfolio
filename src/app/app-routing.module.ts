@@ -9,6 +9,9 @@ import { CoursesComponent } from './component/courses/courses.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { ArticlesDetailsComponent} from './component/articles-details/articles-details.component';
 import { CartComponent } from './component/cart/cart.component';
+import { loginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { SignupGuard } from './data/guards/signup.guard';
 
 
 
@@ -32,6 +35,8 @@ const routes: Routes = [
    {path:'blog', component:BlogComponent},
    {path:'blog/:id', component:ArticlesDetailsComponent},
    {path:'cart', component:CartComponent},
+   { path: 'login', component: loginComponent },
+    { path: 'signup', canActivate: [SignupGuard], component: SignupComponent }
 
 
 
