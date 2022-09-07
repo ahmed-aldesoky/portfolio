@@ -24,6 +24,6 @@ export class LoggedInGuard implements CanActivate {
     }
 
     this.ss.setItem('attemptedRoute', state.url);
-    return this.router.parseUrl('/');
+    return this.router.parseUrl('/login');
   }
 }

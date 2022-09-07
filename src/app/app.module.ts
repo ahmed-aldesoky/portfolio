@@ -35,6 +35,9 @@ import { TitleComponent } from './component/title/title.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { loginComponent } from './component/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { translateModule } from '@ngx-translate/core';
+
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -62,6 +65,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TitleComponent,
     SignupComponent,
     loginComponent,
+    NotFoundComponent,
 
   ],
   imports: [
@@ -77,6 +81,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     StoreModule.forFeature("mycourses",courseReducer),
     EffectsModule.forFeature([coursesEffects]),
     ReactiveFormsModule,
+    translateModule
     // NgbModule,
 
   ],

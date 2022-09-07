@@ -12,6 +12,8 @@ import { CartComponent } from './component/cart/cart.component';
 import { loginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { SignupGuard } from './data/guards/signup.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LoggedInGuard } from './data/guards/logged-in.guard';
 
 
 
@@ -32,11 +34,13 @@ const routes: Routes = [
   // {path:'product/:id', component:ProjectDetailsComponent}
    {path:'home', component:MainPageComponent},
    {path:'courses', component:CoursesComponent},
-   {path:'blog', component:BlogComponent},
+   {path:'blog', canActivate: [LoggedInGuard], component:BlogComponent},
    {path:'blog/:id', component:ArticlesDetailsComponent},
    {path:'cart', component:CartComponent},
    { path: 'login', component: loginComponent },
-    { path: 'signup', canActivate: [SignupGuard], component: SignupComponent }
+   { path: 'signup', canActivate: [SignupGuard], component: SignupComponent },
+   { path:'**', component: NotFoundComponent },
+
 
 
 
